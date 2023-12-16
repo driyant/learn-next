@@ -1,9 +1,10 @@
 import React from "react";
+import { Box } from "@chakra-ui/react";
 
 const Footer = () => {
   return (
     <>
-      <div>Footer - Poppins</div>
+      <Box as="footer">Footer | &copy; - 2023</Box>
     </>
   );
 };
