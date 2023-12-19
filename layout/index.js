@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import Menu from "@/components/menu";
+import Menu from "@/components/nav";
 
 const Layout = ({ children, pageTitle, metaTitle }) => {
   return (
