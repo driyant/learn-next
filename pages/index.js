@@ -1,5 +1,10 @@
 import Layout from "@/layout";
 import { useEffect } from "react";
+import dynamic from "next/dynamic";
+
+const DynamicLayout = dynamic(() => import("@/layout"), {
+  loading: () => <p>Loading...</p>,
+});
 
 export default function Home() {
   const fetchUsers = async () => {
@@ -11,8 +16,8 @@ export default function Home() {
     fetchUsers();
   }, []);
   return (
-    <Layout>
+    <DynamicLayout>
       <p>Homepage Content</p>
-    </Layout>
+    </DynamicLayout>
   );
 }
